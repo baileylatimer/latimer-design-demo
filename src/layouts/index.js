@@ -39,8 +39,8 @@ const Layout = ({ children }) => {
   return (
     <ContextProvider>
       <GlobalStyle />
-   
-          <>
+        <div class="noise"></div>
+          <div>
             <Navigation siteTitle={data.site.siteMetadata.title} />
             <Wrapper>
               {children}
@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
                 <a href="https://www.gatsbyjs.org">Gatsby</a>
               </footer>
             </Wrapper>
-          </>
+          </div>
     
     
     </ContextProvider>
