@@ -23,7 +23,7 @@ const Navigation = ({ siteTitle }) => {
 	return(
 		<Wrapper>
 			<Container>
-				<MenuLink to='/'>
+				<MenuLink className="glitch" data-text={siteTitle} to='/'>
 					{siteTitle}
 				</MenuLink>
 				<MenuLink to='/cart'>

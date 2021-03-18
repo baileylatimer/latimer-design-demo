@@ -1,9 +1,9 @@
 // basic typography style - we suggest you don't modify this file
 // use the 📁custom-style/_typography.scss file to create your custom typography
 
-@if variable-exists("cody-base-partials") ==
+@if variable-exists('cody-base-partials') ==
   false or
-  index($cody-base-partials, "typography")
+  index($cody-base-partials, 'typography')
 {
   :root {
     --heading-line-height: 1.2;
