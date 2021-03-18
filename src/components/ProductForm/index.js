@@ -95,7 +95,8 @@ const ProductForm = ({ product }) => {
 
   return (
     <>
-      <h3 className="margin-top-md" >{price}</h3>
+    <div className="flex justify-between items-center margin-y-xl">
+      <h3 >{price}</h3>
       {/* {options.map(({ id, name, values }, index) => (
         <React.Fragment key={id}>
           <label htmlFor={name}>{name} </label>
@@ -137,6 +138,7 @@ const ProductForm = ({ product }) => {
         
       </button>
       {!available && <p>This Product is out of Stock!</p>}
+      </div>
     </>
   )
 }

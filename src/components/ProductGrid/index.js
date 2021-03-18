@@ -68,9 +68,9 @@ const ProductGrid = () => {
                   />)}
                 </figure>
             </Link>
-            <div className="text-center">
+            <div>
               <Link to={`/product/${handle}/`}>{title}</Link>
-              <div className="margin-top-xs">
+              <div >
                 <PriceTag className="prod-card__price">{getPrice(firstVariant.price)}</PriceTag>
               </div>
             </div>
