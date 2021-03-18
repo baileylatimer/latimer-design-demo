@@ -1,17 +1,36 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+
+import { useStaticQuery, graphql } from "gatsby"
 import SEO from '~/components/seo'
 import ProductGrid from '~/components/ProductGrid'
+import Img from "~/components/pic"
 
-const IndexPage = () => (
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: {eq: "cover_gosun.jpg"}) {
+        childImageSharp {
+          fluid {
+          ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+
+return (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Shop powered by Gatsby and Shopify.</p>
-    <ProductGrid />
-    <Link to="/page-2/">Go to page 2</Link>
+    <section class="project-page padding-x-sm">
+      <figure class="hero">
+      <Img style={{ height: "100%", width: "100%" }} imgStyle={{ objectFit: "cover" }} fluid={data.file.childImageSharp.fluid} alt="Image one" />
+      </figure>
+      <ProductGrid />
+    </section>
   </>
 )
+}
 
-export default IndexPage

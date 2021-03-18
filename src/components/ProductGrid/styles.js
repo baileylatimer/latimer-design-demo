@@ -26,12 +26,9 @@ export const Title = styled.span`
 `
 
 export const PriceTag = styled.span`
-  font-weight: 300;
-  font-size: 1rem;
-  text-align: center;
-  margin-top: 15px;
+
 
   :before {
-    content: '- '
+    content: ''
   }
 `

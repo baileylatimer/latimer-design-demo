@@ -58,16 +58,22 @@ const ProductGrid = () => {
     <Grid>
       {allShopifyProduct.edges
         ? allShopifyProduct.edges.map(({ node: { id, handle, title, images: [firstImage], variants: [firstVariant] } }) => (
-          <Product key={id} >
-            <Link to={`/product/${handle}/`}>
+          <Product className="prod-card" key={id} >
+            <Link className="prod-card__img-link" to={`/product/${handle}/`}>
+              <figure class="prod-card__img ">
               {firstImage && firstImage.localFile &&
-                (<Img
-                  fluid={firstImage.localFile.childImageSharp.fluid}
-                  alt={handle}
-                />)}
+                  (<Img
+                    fluid={firstImage.localFile.childImageSharp.fluid}
+                    alt={handle}
+                  />)}
+                </figure>
             </Link>
-            <Title>{title}</Title>
-            <PriceTag>{getPrice(firstVariant.price)}</PriceTag>
+            <div className="text-center">
+              <Link to={`/product/${handle}/`}>{title}</Link>
+              <div className="margin-top-xs">
+                <PriceTag className="prod-card__price">{getPrice(firstVariant.price)}</PriceTag>
+              </div>
+            </div>
           </Product>
         ))
         : <p>No Products found!</p>}

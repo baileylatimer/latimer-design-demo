@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
 
               <footer>
              
-
+{/* 
 <ul>
                 {data.allShopifyPage.nodes.map(({  title, handle }) => (
           
@@ -56,11 +56,11 @@ const Layout = ({ children }) => {
            {title}
             </Link></li>
           
-        ))}</ul>
+        ))}</ul> */}
 
-© {new Date().getFullYear()}, Built with
+{/* © {new Date().getFullYear()}, Built with
                 {` `}
-                <a href="https://www.gatsbyjs.org">Gatsby</a>
+                <a href="https://www.gatsbyjs.org">Gatsby</a> */}
               </footer>
             </Wrapper>
           </div>
