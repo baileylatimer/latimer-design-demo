@@ -29,18 +29,18 @@ const LineItem = props => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper className="width-100%">
       {variantImage}
-      <p>
+      <p className="margin-y-lg">
         {line_item.title}
         {`  `}
         {line_item.variant.title === !'Default Title'
           ? line_item.variant.title
           : ''}
       </p>
-      {selectedOptions}
+      {/* {selectedOptions} */}
       {line_item.quantity}
-      <button onClick={handleRemove}>Remove</button>
+      <button className="link-btn" onClick={handleRemove}>[x]</button>
     </Wrapper>
   )
 }

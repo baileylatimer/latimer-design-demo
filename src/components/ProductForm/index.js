@@ -128,20 +128,12 @@ const ProductForm = ({ product }) => {
         value={quantity}
       /> */}
       <br />
-      <button className="td-text-block td-text-block--split-2 text-lg"
+      <button className="link-btn"
         type="submit"
         disabled={!available || adding}
         onClick={handleAddToCart}
       >
-        <span className="td-text-block__wrapper">
-          <em className="td-text-block__front-text">Add to Cart &rarr;</em>
-          <em className="td-text-block__final-text">Add to Cart &rarr;</em>
-        </span>
-
-        <span className="td-text-block__wrapper">
-          <em className="td-text-block__front-text">Add to Cart &rarr;</em>
-          <em className="td-text-block__final-text">Add to Cart &rarr;</em>
-        </span>
+      Add to cart &rarr;
         
       </button>
       {!available && <p>This Product is out of Stock!</p>}

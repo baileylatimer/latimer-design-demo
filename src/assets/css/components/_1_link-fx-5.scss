@@ -22,3 +22,16 @@
     background-position: 16px 100%;
   }
 }
+
+.link-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-style: italic;
+  color: var(--color-contrast-high);
+  &:hover {
+    color: var(--color-contrast-higher);
+  }
+}
