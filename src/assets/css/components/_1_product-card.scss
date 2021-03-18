@@ -9,17 +9,54 @@ Usage: codyhouse.co/license
 
 .prod-card {
   position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  &::before {
+    pointer-events: none;
+    content: '';
+    display: block;
+    background-image: linear-gradient(
+      224deg,
+      rgba(255, 255, 255, 0) 13%,
+      rgba(255, 255, 255, 0.35) 36%,
+      rgba(255, 255, 255, 0.24) 52%,
+      rgba(255, 255, 255, 0.35) 58%,
+      rgba(255, 255, 255, 0) 85%
+    );
+    background-position-x: -100%;
+    mix-blend-mode: overlay;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.85;
+  }
+  &:hover,
+  &:hover a {
+    color: var(--color-contrast-higher) !important;
+    box-shadow: 0 16px 80px 0 rgba(0, 0, 0, 0.1);
+    &:before {
+      transition: background-position 1200ms, opacity 1000ms;
+      background-position-x: 200%;
+      opacity: 0;
+    }
+  }
 }
 
 .prod-card__img-link {
   text-decoration: none;
   display: block;
 
-  &:hover {
-    .prod-card__img {
-      opacity: 0.85;
-    }
-  }
+  // &:hover {
+  //   .prod-card__img {
+  //     opacity: 0.85;
+  //   }
+  // }
 }
 
 .prod-card__img {

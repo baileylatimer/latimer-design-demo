@@ -32,7 +32,7 @@ const Navigation = ({ siteTitle }) => {
 							{quantity}
 						</CartCounter>
 					}
-					Cart 🛍
+					Cart&nbsp;
 				</MenuLink>
 			</Container>
 		</Wrapper>

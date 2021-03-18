@@ -95,8 +95,8 @@ const ProductForm = ({ product }) => {
 
   return (
     <>
-      <h3>{price}</h3>
-      {options.map(({ id, name, values }, index) => (
+      <h3 className="margin-top-md" >{price}</h3>
+      {/* {options.map(({ id, name, values }, index) => (
         <React.Fragment key={id}>
           <label htmlFor={name}>{name} </label>
           <select
@@ -126,14 +126,23 @@ const ProductForm = ({ product }) => {
         step="1"
         onChange={handleQuantityChange}
         value={quantity}
-      />
+      /> */}
       <br />
-      <button
+      <button className="td-text-block td-text-block--split-2 text-lg"
         type="submit"
         disabled={!available || adding}
         onClick={handleAddToCart}
       >
-        Add to Cart
+        <span className="td-text-block__wrapper">
+          <em className="td-text-block__front-text">Add to Cart &rarr;</em>
+          <em className="td-text-block__final-text">Add to Cart &rarr;</em>
+        </span>
+
+        <span className="td-text-block__wrapper">
+          <em className="td-text-block__front-text">Add to Cart &rarr;</em>
+          <em className="td-text-block__final-text">Add to Cart &rarr;</em>
+        </span>
+        
       </button>
       {!available && <p>This Product is out of Stock!</p>}
     </>

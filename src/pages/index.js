@@ -24,10 +24,8 @@ export default () => {
 return (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <section class="project-page padding-x-sm">
-      <figure class="hero">
-      <Img style={{ height: "100%", width: "100%" }} imgStyle={{ objectFit: "cover" }} fluid={data.file.childImageSharp.fluid} alt="Image one" />
-      </figure>
+    <section class="project-page padding-y-xl">
+
       <ProductGrid />
     </section>
   </>
