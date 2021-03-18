@@ -1,0 +1,177 @@
+header {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  z-index: 10;
+  position: relative;
+}
+
+header {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  z-index: 10;
+}
+header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+header ul li {
+  list-style: none;
+}
+header ul li a {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+}
+header ul li a:after {
+  content: "";
+  width: 0;
+  height: 0.08em;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+
+  transition: width 0.3s ease;
+}
+header ul li a:hover:after {
+  width: 100%;
+}
+header .active {
+  color: var(--color-contrast-medium);
+}
+header .active:after {
+  background-color: var(--color-contrast-medium);
+  width: 100%;
+}
+header .active:hover:after {
+  width: 0;
+}
+header .menu ul li a {
+  position: relative;
+}
+header .menu ul li a svg {
+  position: absolute;
+  left: -1.25em;
+  bottom: 0.15em;
+}
+header .heading,
+header .menu {
+  z-index: 1;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 10;
+}
+header .heading a {
+  pointer-events: auto;
+}
+header .heading .col a {
+  position: relative;
+}
+header .heading .col a:after {
+  content: "";
+  width: 0;
+  height: 0.08em;
+  bottom: 2px;
+  left: 0;
+  position: absolute;
+  transition: width 0.3s ease;
+}
+header .heading .col a:hover:after {
+  width: 100%;
+}
+header .heading .col .active {
+  color: var(--color-contrast-higher) !important;
+}
+header .heading .col,
+header .menu .col {
+  width: 50%;
+  float: left;
+  padding: 1.1em 0;
+  box-sizing: border-box;
+}
+header .heading .col.copy,
+header .menu .col.copy {
+  text-align: right;
+}
+header .col ul li {
+  pointer-events: auto;
+}
+header .show-mobile {
+  display: none;
+}
+header .heading {
+  left: 0;
+  top: 0;
+  padding: 0 0 0 1.1em;
+  overflow: hidden;
+  float: left;
+}
+header .heading .col.rand-title {
+  padding: 1.1em 2.2em 1.1em 0;
+}
+header .menu {
+  right: 0;
+  top: 0;
+  padding: 0 1.1em 0 0;
+  overflow: visible;
+  float: right;
+}
+@media screen and (max-width: 700px) {
+  header {
+    padding: 0.6em;
+  }
+  header .heading,
+  header .menu {
+    width: 100%;
+    padding: 0;
+  }
+  header .heading .col,
+  header .menu .col {
+    width: 50%;
+    float: left;
+  }
+  header .heading {
+    position: relative;
+  }
+  header .menu {
+    top: auto;
+  }
+  header .home .menu {
+    bottom: 0;
+  }
+  header .home .menu .copy {
+    float: right;
+  }
+  header .menu .copy {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+  }
+  header .menu .col {
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
+    box-sizing: border-box;
+  }
+  header .heading .col.rand-title {
+    padding: 10px;
+  }
+  header .heading .col,
+  header .menu .col {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  header .count {
+    padding: 10px;
+    top: 0;
+    right: 0;
+  }
+}

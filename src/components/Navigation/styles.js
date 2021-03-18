@@ -18,7 +18,7 @@ export const Container = styled.div`
 `
 
 export const MenuLink = styled(Link)`
-  color: black;
+
   text-decoration: none;
   font-size: 2rem;
   font-weight: bold;
@@ -30,7 +30,7 @@ export const MenuLink = styled(Link)`
 
 export const CartCounter = styled.span`
   background-color: black;
-  color: white;
+
   border-radius: 20px;
   padding: 0 10px;
   font-size: 1.2rem;

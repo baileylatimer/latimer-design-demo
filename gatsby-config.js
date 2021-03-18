@@ -12,6 +12,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `css`,
+        path: `${__dirname}/src/assets/css/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

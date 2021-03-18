@@ -1,0 +1,9 @@
+.hero {
+  height: 400px;
+  @include breakpoint(md) {
+    height: 60vh;
+  }
+  min-height: 400px;
+  max-height: 60vh;
+  overflow: hidden;
+}
