@@ -40,8 +40,9 @@ const Layout = ({ children }) => {
     <ContextProvider>
       <GlobalStyle />
         <div class="noise"></div>
+        <Navigation siteTitle={data.site.siteMetadata.title} />
           <div>
-            <Navigation siteTitle={data.site.siteMetadata.title} />
+            
             <Wrapper>
               {children}
 

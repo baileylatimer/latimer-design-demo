@@ -21,7 +21,7 @@ const Navigation = ({ siteTitle }) => {
   const [hasItems, quantity] = useQuantity()
 
 	return(
-		<Wrapper>
+	<nav className="width-100vw">
 			<Container>
 				<MenuLink className="glitch color-contrast-higher" data-text={siteTitle} to='/'>
 					{siteTitle}
@@ -35,7 +35,7 @@ const Navigation = ({ siteTitle }) => {
 					Cart&nbsp;
 				</MenuLink>
 			</Container>
-		</Wrapper>
+	</nav>
 	)
 }
 

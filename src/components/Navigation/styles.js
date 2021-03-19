@@ -19,11 +19,6 @@ export const Container = styled.div`
 
 export const MenuLink = styled(Link)`
 
-  font-size: 2rem;
-
-  @media (max-width: ${breakpoints.s}px){
-    font-size: 1.4rem
-  }
 `
 
 export const CartCounter = styled.span`
