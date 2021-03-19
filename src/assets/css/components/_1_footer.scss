@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  padding: var(--space-xs);
+  mix-blend-mode: difference;
+}

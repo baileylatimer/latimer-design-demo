@@ -1806,7 +1806,9 @@
     border: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1));
   }
   .border-top {
-    border-top: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1));
+    border-top: 1px
+      solid
+      alpha(var(--color-contrast-higher), var(--border-o, 1));
   }
   .border-bottom {
     border-bottom: 1px

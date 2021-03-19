@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery, Link} from 'gatsby'
+import { graphql, useStaticQuery, Link, navigate} from 'gatsby'
 
 import SEO from '~/components/seo'
 import ProductForm from '~/components/ProductForm'
@@ -24,6 +24,7 @@ console.log(collection)
     <>
       <SEO title={product.title} description={product.description} />
       <Container className="padding-top-xxl">
+        
         <TwoColumnGrid>
           <GridLeft>
             {product.images.map(image => (

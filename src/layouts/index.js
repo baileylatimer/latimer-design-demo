@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql,  useStaticQuery, Link } from 'gatsby'
+import { StaticQuery, graphql,  useStaticQuery, Link, navigate } from 'gatsby'
 import styled from '@emotion/styled'
 
 import ContextProvider from '~/provider/ContextProvider'
@@ -42,30 +42,26 @@ const Layout = ({ children }) => {
         <div class="noise"></div>
         <Navigation siteTitle={data.site.siteMetadata.title} />
           <div>
-            
             <Wrapper>
               {children}
-
-
-              <footer>
-             
-{/* 
-<ul>
-                {data.allShopifyPage.nodes.map(({  title, handle }) => (
-          
-          <li><Link to={`/page/${handle}/`}>
-           {title}
-            </Link></li>
-          
-        ))}</ul> */}
-
-{/* © {new Date().getFullYear()}, Built with
-                {` `}
-                <a href="https://www.gatsbyjs.org">Gatsby</a> */}
-              </footer>
             </Wrapper>
           </div>
-    
+          <footer className="width-100vw border-top position-fixed z-index-3">
+              <button className="link-btn" onClick={() => { navigate(-1) }}>← Go back</button>
+            {/* 
+            <ul>
+              {data.allShopifyPage.nodes.map(({  title, handle }) => (
+              <li><Link to={`/page/${handle}/`}>
+              {title}
+                </Link></li>
+            ))}</ul> */}
+            <div className="flex">
+              © {new Date().getFullYear()}<span className="hide show@md">, Built with
+              {` `}
+              <a href="https://www.gatsbyjs.org">Gatsby</a> + <a href="https://www.shopify.com">Shopify</a>
+              </span>
+            </div>
+          </footer>
     
     </ContextProvider>
   )
