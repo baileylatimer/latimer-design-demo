@@ -35,17 +35,16 @@ console.log(collection)
             ))}
           </GridLeft>
           <GridRight>
-            <ProductTitle>{product.title}</ProductTitle>
+            <ProductTitle className="color-contrast-higher glitch margin-bottom-sm">{product.title}</ProductTitle>
             <ProductDescription
               dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
             />
             <ProductForm product={product} />
           </GridRight>
         </TwoColumnGrid>
-        {collection && 
+        {/* {collection && 
                     <Link to={`/collection/${collection.handle}`}>{collection.title}</Link>
-
-        }
+        } */}
       </Container>
     </>
   )

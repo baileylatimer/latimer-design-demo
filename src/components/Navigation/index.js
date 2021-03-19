@@ -23,10 +23,10 @@ const Navigation = ({ siteTitle }) => {
 	return(
 		<Wrapper>
 			<Container>
-				<MenuLink className="glitch" data-text={siteTitle} to='/'>
+				<MenuLink className="glitch color-contrast-higher" data-text={siteTitle} to='/'>
 					{siteTitle}
 				</MenuLink>
-				<MenuLink to='/cart'>
+				<MenuLink className="color-contrast-higher" to='/cart'>
 					{hasItems &&
 						<CartCounter>
 							{quantity}
