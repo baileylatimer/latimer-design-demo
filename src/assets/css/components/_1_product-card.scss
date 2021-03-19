@@ -11,6 +11,19 @@ Usage: codyhouse.co/license
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  &:hover {
+    a {
+      color: var(--color-contrast-higher) !important;
+    }
+    box-shadow: 0 16px 80px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.prod-card__img-link {
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  position: relative;
   &::before {
     pointer-events: none;
     content: '';
@@ -36,9 +49,7 @@ Usage: codyhouse.co/license
     z-index: 1;
     opacity: 0.85;
   }
-  &:hover,
-  &:hover a {
-    color: var(--color-contrast-higher) !important;
+  &:hover {
     box-shadow: 0 16px 80px 0 rgba(0, 0, 0, 0.1);
     &:before {
       transition: background-position 1200ms, opacity 1000ms;
@@ -46,17 +57,6 @@ Usage: codyhouse.co/license
       opacity: 0;
     }
   }
-}
-
-.prod-card__img-link {
-  text-decoration: none;
-  display: block;
-
-  // &:hover {
-  //   .prod-card__img {
-  //     opacity: 0.85;
-  //   }
-  // }
 }
 
 .prod-card__img {
