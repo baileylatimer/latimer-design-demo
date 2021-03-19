@@ -23,7 +23,7 @@ console.log(collection)
   return (
     <>
       <SEO title={product.title} description={product.description} />
-      <Container className="padding-top-xl">
+      <Container className="padding-top-xxl">
         <TwoColumnGrid>
           <GridLeft>
             {product.images.map(image => (

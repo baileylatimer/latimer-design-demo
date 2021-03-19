@@ -5,17 +5,12 @@ header {
   overflow: visible;
   z-index: 10;
   position: relative;
+  padding: var(--space-xs);
+  mix-blend-mode: difference;
 }
 
-header {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
-  z-index: 10;
-}
 header:after {
-  content: " ";
+  content: ' ';
   display: block;
   clear: both;
 }
@@ -30,7 +25,7 @@ header ul li a {
   position: relative;
 }
 header ul li a:after {
-  content: "";
+  content: '';
   width: 0;
   height: 0.08em;
   bottom: 0;
@@ -76,7 +71,7 @@ header .heading .col a {
   position: relative;
 }
 header .heading .col a:after {
-  content: "";
+  content: '';
   width: 0;
   height: 0.08em;
   bottom: 2px;

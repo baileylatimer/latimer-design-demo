@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import reduce from 'lodash/reduce'
 import PropTypes from 'prop-types'
+import Timezone from '~/components/date'
 
 import StoreContext from '~/context/StoreContext'
 import {
@@ -21,11 +22,14 @@ const Navigation = ({ siteTitle }) => {
   const [hasItems, quantity] = useQuantity()
 
 	return(
-	<nav className="width-100vw">
+	<header className="width-100vw border-bottom position-fixed z-index-3">
 			<Container>
 				<MenuLink className="glitch color-contrast-higher" data-text={siteTitle} to='/'>
 					{siteTitle}
 				</MenuLink>
+        <span className="hide show@md">32.7157° N, 117.1611° W</span>
+        <Timezone />
+       
 				<MenuLink className="color-contrast-higher" to='/cart'>
 					{hasItems &&
 						<CartCounter>
@@ -35,7 +39,7 @@ const Navigation = ({ siteTitle }) => {
 					Cart&nbsp;
 				</MenuLink>
 			</Container>
-	</nav>
+	</header>
 	)
 }
 

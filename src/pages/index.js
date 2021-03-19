@@ -24,7 +24,7 @@ export default () => {
 return (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <section class="project-page padding-y-xl">
+    <section class="project-page padding-y-xxl">
 
       <ProductGrid />
     </section>

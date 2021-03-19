@@ -1,6 +1,6 @@
-@if variable-exists("cody-base-partials") ==
+@if variable-exists('cody-base-partials') ==
   false or
-  index($cody-base-partials, "util")
+  index($cody-base-partials, 'util')
 {
   .blend-difference {
     mix-blend-mode: difference;
@@ -1154,7 +1154,7 @@
 
   // --------------------------------
 
-  [class*="color-"] {
+  [class*='color-'] {
     --color-o: 1;
   }
 
@@ -1582,21 +1582,21 @@
   @each $breakpoint, $value in $breakpoints {
     $i: index($breakpoints, $breakpoint $value);
     @if $i == 1 {
-      [class*="max-width-adaptive"] {
+      [class*='max-width-adaptive'] {
         max-width: map-get($map: $breakpoints, $key: #{$breakpoint});
       }
     } @else {
-      $classList: "";
+      $classList: '';
       @each $subBreakpoint, $subValue in $breakpoints {
         $j: index($breakpoints, $subBreakpoint $subValue);
         @if $j == $i {
-          $classList: ".max-width-adaptive-#{$subBreakpoint}";
+          $classList: '.max-width-adaptive-#{$subBreakpoint}';
         } @else if $j > $i {
-          $classList: $classList + ", .max-width-adaptive-#{$subBreakpoint}";
+          $classList: $classList + ', .max-width-adaptive-#{$subBreakpoint}';
         }
       }
       @if $i < $breakpointsNr {
-        $classList: $classList + ", .max-width-adaptive";
+        $classList: $classList + ', .max-width-adaptive';
       }
       @include breakpoint(#{$breakpoint}) {
         #{$classList} {
@@ -1787,7 +1787,7 @@
   }
 
   .clearfix::after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -1798,7 +1798,7 @@
 
   // --------------------------------
 
-  [class*="border-"] {
+  [class*='border-'] {
     --border-o: 1;
   }
 
@@ -1811,7 +1811,7 @@
   .border-bottom {
     border-bottom: 1px
       solid
-      alpha(var(--color-contrast-low), var(--border-o, 1));
+      alpha(var(--color-contrast-higher), var(--border-o, 1));
   }
   .border-left {
     border-left: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1));
@@ -2033,7 +2033,7 @@
   // --------------------------------
 
   .bg,
-  [class*="bg-"] {
+  [class*='bg-'] {
     --bg-o: 1;
   }
 
@@ -3017,7 +3017,7 @@
       }
     }
 
-    @include breakpoint(#{$breakpoint}, "not all") {
+    @include breakpoint(#{$breakpoint}, 'not all') {
       .has-margin\@#{$breakpoint} {
         margin: 0 !important;
       }
