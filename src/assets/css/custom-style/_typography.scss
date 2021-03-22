@@ -4,18 +4,18 @@
 
 // --------------------------------
 @font-face {
-  font-family: "Klarheit Grotesk";
-  src: url("../fonts/KlarheitGrotesk-Book.otf");
+  font-family: 'Grand Slang';
+  src: url('../fonts/GrandSlang-Italic.otf');
 }
 
 @font-face {
-  font-family: "Neue Montreal";
-  src: url("../fonts/NeueMontreal-Regular.otf");
+  font-family: 'Neue Montreal';
+  src: url('../fonts/NeueMontreal-Regular.otf');
 }
 
 :root {
   // font family
-  --font-primary: "Neue Montreal", sans-serif;
+  --font-primary: 'Neue Montreal', sans-serif;
 
   // font size
   --text-base-size: 1em; // body font-size
@@ -63,6 +63,10 @@ h2,
 h3,
 h4 {
   font-weight: 700;
+}
+
+i {
+  font-family: 'Grand Slang';
 }
 
 // --------------------------------

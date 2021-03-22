@@ -14,7 +14,7 @@ const LineItem = props => {
     <img
       src={line_item.variant.image.src}
       alt={`${line_item.title} product shot`}
-      height="60px"
+      height="100px"
     />
   ) : null
 
@@ -29,18 +29,26 @@ const LineItem = props => {
   }
 
   return (
-    <Wrapper className="width-100%">
-      {variantImage}
-      <p className="margin-y-lg">
-        {line_item.title}
-        {`  `}
-        {line_item.variant.title === !'Default Title'
-          ? line_item.variant.title
-          : ''}
-      </p>
-      {/* {selectedOptions} */}
-      {line_item.quantity}
-      <button className="link-btn" onClick={handleRemove}>[x]</button>
+    <Wrapper className="width-100% flex justify-between">
+      <div className="flex">
+        {variantImage}
+        <p className="margin-y-xs margin-x-sm">
+          {line_item.title}
+          {`  `}
+          {line_item.variant.title === !'Default Title'
+            ? line_item.variant.title
+            : ''}
+        </p>
+        {/* {selectedOptions} */}
+
+      </div>
+      <div className="flex">
+        <p className="margin-y-xs margin-right-sm">
+          {line_item.quantity}
+        </p>
+        <button className="link-btn" onClick={handleRemove}>[x]</button>
+      </div>
+
     </Wrapper>
   )
 }

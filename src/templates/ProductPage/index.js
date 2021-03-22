@@ -36,7 +36,7 @@ console.log(collection)
             ))}
           </GridLeft>
           <GridRight>
-            <ProductTitle className="color-contrast-higher glitch margin-bottom-sm">{product.title}</ProductTitle>
+            <ProductTitle className="glitch margin-bottom-sm text-xxxl  color-contrast-higher">{product.title}</ProductTitle>
             <ProductDescription
               dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
             />

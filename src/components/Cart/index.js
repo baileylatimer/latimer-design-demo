@@ -19,22 +19,20 @@ const Cart = () => {
 
   return (
     <div className="flex flex-column flex-row@md justify-between ">
-      <div  className="width-60% margin-right-md">
+      <div  className="col-6@md margin-right-md">
         {line_items}
       </div>
-      <div>
-        <h2>Subtotal</h2>
-        <p>$ {checkout.subtotalPrice}</p>
-        <br />
-        <h2>Taxes</h2>
-        <p>$ {checkout.totalTax}</p>
-        <br />
-        <h2>Total</h2>
-        <p>$ {checkout.totalPrice}</p>
-        <br />
-        <button class="link-btn" onClick={handleCheckout} disabled={checkout.lineItems.length === 0}>Check out  &rarr;</button>
+
+      <div class="col-4@md">
+      
+        <div class="cart__subtotal flex flex-column justify-center">
+          <p class="flex justify-between"><span>Subtotal</span> <span>$ {Math.round(checkout.subtotalPrice)}</span></p>
+          <button class="link-btn text-center" onClick={handleCheckout} disabled={checkout.lineItems.length === 0}>Check out  &rarr;</button>
+          {/* <p class="color-contrast-medium text-sm text-center display@md">Shipping &amp; taxes calculated at checkout</p> */}
+        </div>
       </div>
     </div>
+
   )
 }
 

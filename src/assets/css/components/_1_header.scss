@@ -6,7 +6,11 @@ header {
   z-index: 10;
   position: relative;
   padding: var(--space-xs);
-  mix-blend-mode: difference;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) -8.06%,
+    rgba(0, 0, 0, 0.9) 62.9%
+  );
 }
 
 header:after {
