@@ -7,8 +7,8 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Latimer Design`,
-    description: `Kick off your next, ecommerce experience with this Gatsby starter. This starter ships with credentials to a shopify demo store so you can try it out immediately.`,
-    author: `@alexanderhorl`,
+    description: `Welcome to the blazing fast headless demo store built with Gatsby + Shopify`,
+    author: `@latimer2k`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,8 +36,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000`,
+        theme_color: `#000`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
@@ -77,14 +77,14 @@ module.exports = {
         precachePages: [`/product/*`, `/collection/*`, `/`],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-134421805-1",
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: "UA-134421805-1",
+    //     anonymize: true,
+    //     respectDNT: true,
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
