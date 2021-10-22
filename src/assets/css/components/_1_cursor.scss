@@ -1,0 +1,10 @@
+#cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--color-highlight);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: transform .15s ease-in-out;
+}

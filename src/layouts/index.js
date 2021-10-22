@@ -62,7 +62,9 @@ const Layout = ({ children }) => {
               </span>
             </div>
           </footer>
-    
+          <div id="cursor"></div>
+
+
     </ContextProvider>
   )
 }

@@ -1,7 +1,6 @@
 
 
 // File#: _1_image-zoom
-// Usage: codyhouse.co/license
 
 (function() {
     var ImageZoom = function(element, index) {

@@ -50,11 +50,20 @@
   @include defineColorHSL(--color-contrast-higher, 36, 100%, 98%);
 }
 
+:root {
+--color-highlight: #D0FF13;
+}
+
 body,
 [data-theme='default'] {
   // font rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+background: var(--color-highlight);
+color: #000;
 }
 
 // --------------------------------
